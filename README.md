@@ -6,6 +6,8 @@ The publisher of the message must submit a topic with a unique name for each req
 
 Publishers do not need to submit topic names for response if publishers do not expect a response from ESP32. Thus, M2M communication here will be asynchronous.
 
+![ESP32](https://raw.githubusercontent.com/kamshory/WSClientESP32/main/esp32.jpg)
+
 # Library Used
 
 ```cpp
