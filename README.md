@@ -449,7 +449,7 @@ void webSocketEvent(WStype_t type, uint8_t *payload, size_t length)
 }
 ```
 
-# Handle Incomming Text Message
+# Handle Incomming Text Message from WebSocket Server
 
 ```cpp
 void handleMessage(uint8_t *payload, size_t length)
@@ -478,7 +478,7 @@ void handleMessage(uint8_t *payload, size_t length)
 }
 ```
 
-# Send Response to WebSocket
+# Send Response to WebSocket Server
 
 ```cpp
 void sendResponse(const char * responseTopic, String response, int callbackDelay)
@@ -513,7 +513,7 @@ void sendResponse(const char * responseTopic, String response, int callbackDelay
 }
 ```
 
-# Reconnect WebSocket
+# Reconnect to WebSocket Server
 
 ```cpp
 void wsReconnect()
