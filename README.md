@@ -83,12 +83,18 @@ WebSocketsClient webSocket;
 
 # Declare Tasks
 
+In C and C++, there is a condition where a function is not recognized if it has not been defined when the function is called. The function declaration will tell the compiler that the function will definitely be defined.
+
 ```cpp
 void Task1(void *pvParameters);
 void Task2(void *pvParameters);
 ```
 
 # URL Encoding and Decoding
+
+URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII set, the URL has to be converted. URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet. URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits. URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.
+
+Source https://www.w3schools.com/html/html_urlencode.asp
 
 ```cpp
 String urlDecode(String str)
