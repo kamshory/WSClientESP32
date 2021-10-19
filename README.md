@@ -176,6 +176,8 @@ unsigned char h2int(char c)
 
 # EEPROM Tools
 
+The ESP8266 and ESP32 can store data permanently in the EEPROM at the specified address. To store more than one byte of data, an address must be specified. Each byte occupies an address of the EEPROM. To store multiple standalone data, the offset and length of each data must be determined so that they do not overlap one another. The address when reading data must be the same as the address when writing data.
+
 ```cpp
 void writeData(int offset, int length, String value)
 {
@@ -229,6 +231,10 @@ String readDataString(int offset, int length)
 
 # Get Access Point Data
 
+Before the ESP32 was connected to the network, users could access the ESP32 through the internal access point of the ESP32 using a PC or smartphone.
+
+`getAPData` will handle data requests from the web before the user sets the configuration. Thus, the form will be filled with old data stored in the EEPROM before the user fills it out.
+
 ```cpp
 void getAPData()
 {
@@ -255,6 +261,8 @@ void getAPData()
   server.send(200, "application/json", response);
 }
 ```
+
+`saveAPData` will save the data submitted by the user from the form to the EEPROM.
 
 # Save Access Point Data
 
@@ -284,6 +292,8 @@ void saveAPData()
 
 # Reset Access Point Data
 
+If the user forgets the SSID or password of the ESP32 internal access point, the user can reset the configuration.
+
 ```cpp
 void resetAP()
 {
@@ -302,6 +312,8 @@ void resetAP()
 }
 ```
 
+If the user wants to configure the configuration without using the ESP32's internal access point, the user can set the WiFi configuration from this function. Adjust the SSID name and password according to the available network.
+
 # Reset Workstation WiFi
 
 ```cpp
@@ -315,6 +327,8 @@ void resetSTA()
 ```
 
 # Get Subscribtion Data
+
+`getSubData` will handle data requests from the web before the user sets the configuration. Thus, the form will be filled with old data stored in the EEPROM before the user fills it out.
 
 ```cpp
 void getSubData()
@@ -364,6 +378,8 @@ void getSubData()
 
 # Save Subscribtion Data
 
+`saveAPData` will save the data submitted by the user from the form to the EEPROM.
+
 ```cpp
 void saveSubData()
 {
@@ -411,6 +427,8 @@ void saveSubData()
 ```
 
 # Get WebSocket Configuration
+
+Before doing a handshake with the WebSocket server, ESP32 read the subscribtion configuration stored in the EEPROM.
 
 ```cpp
 void getWSConfig()
@@ -835,3 +853,4 @@ void loop(void)
   delay(2);
 }
 ```
+
