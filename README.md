@@ -12,7 +12,7 @@ ESP32 comes with a web server. Users can configure the access point, network, or
 
 Processes to serve clients must not interfere with the main process of ESP32. Thus, the ESP32 must do multitasking so that all processes run simultaneously without interfering with each other.
 
-![ESP32](https://raw.githubusercontent.com/kamshory/WSClientESP32/main/multitasking)
+![ESP32](https://raw.githubusercontent.com/kamshory/WSClientESP32/main/multitasking.svg)
 
 # Library Used
 
