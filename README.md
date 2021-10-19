@@ -10,7 +10,7 @@ Publishers do not need to submit topic names for response if publishers do not e
 
 ESP32 comes with a web server. Users can configure the access point, network, or WebSocket server using a browser.
 
-Processes to serve clients must not interfere with the main process of ESP32. Thus, the ESP32 must do multitasking so that all processes run simultaneously without interfering with each other.
+Processes to serve clients must not interfere with the main process of ESP32. Thus, the ESP32 must do multitasking so that all processes run independently without interfering with each other.
 
 ![ESP32](https://raw.githubusercontent.com/kamshory/WSClientESP32/main/multitasking.svg)
 
